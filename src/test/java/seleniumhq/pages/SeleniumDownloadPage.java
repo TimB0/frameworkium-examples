@@ -13,7 +13,8 @@ public class SeleniumDownloadPage extends BasePage<SeleniumDownloadPage> {
     private HeaderComponent header;
 
     @Visible
-    @FindBy(css = "body .td-main div:nth-child(3) > div:nth-child(2) a")
+    //@FindBy(css = "body .td-main div:nth-child(3) > div:nth-child(2) a")
+    @FindBy(xpath = "//p[contains(text(),'Latest stable version')]//a")
     private Link latestDownloadLink;
 
     public static SeleniumDownloadPage open() {

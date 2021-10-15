@@ -14,7 +14,8 @@ public class HomePage extends BasePage<HomePage> {
     @Visible
     private HeaderComponent header;
 
-    @FindBy(css = "button[data-target='#main_navbar']")
+    // @FindBy(css = "button[data-target='#main_navbar']")
+    @FindBy(xpath = "//button[@type='button' and @class='navbar-toggler']")
     private WebElement menuLink;
 
     public static HomePage open() {

@@ -1,0 +1,42 @@
+https://selenium.dev/downloads/
+
+Get the link to the most stable version...this will be dynamic and change frequently
+
+Parent Child Locator
+HTML:
+<p class="card-text">Latest stable version
+<a href="https://github.com/SeleniumHQ/selenium/releases/download/selenium-3.141.59/selenium-server-standalone-3.141.59.jar">3.141.59</a></p>
+
+XPATH:
+@FindBy(xpath = "//p[contains(text(),'Latest stable version')]//a")
+-------------------------------------------------------------------------------------------------------------------------------------------------
+
+Using the AND operator more than once
+
+https://web.archive.org/web/20171007153331/https://v4-alpha.getbootstrap.com/components/dropdowns
+
+There are two of the same buttons but with different ids:
+
+HTML:
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown button
+  </button>
+
+<div class="dropdown">
+  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Dropdown
+  </button>
+
+XPATH:
+//div[@class='dropdown']//button[@type='button' and @class='btn btn-secondary dropdown-toggle' and @id='dropdownMenuButton']
+----------------------------------------------------------------------------------------------------------------------------------------------------
+
+http://localhost:8096/web/index.html#!/mypreferencesdisplay.html?userId=5c36925c3b9e445e858853ef44623012
+
+
+
+//a[text()='test2 test2']//parent::td//preceding-sibling::td//div//input
+//a[text()='test2 test2']//preceding::td//preceding::td//div//input
+
+//a[text()='test2 test2']//preceding::td//preceding::td//div//input

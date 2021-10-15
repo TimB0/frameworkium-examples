@@ -16,7 +16,8 @@ public class EnglishCountiesPage extends BasePage<EnglishCountiesPage> {
 
     @Visible
     @CacheLookup
-    @FindBy(css = "table.wikitable") // luckily there's only one
+    // @FindBy(css = "table.wikitable") // luckily there's only one
+    @FindBy(xpath = "//table[@class='wikitable sortable jquery-tablesorter']")
     private OptimisedStreamTable listTable;
 
     public static EnglishCountiesPage open() {

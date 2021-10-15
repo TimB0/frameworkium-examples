@@ -15,7 +15,8 @@ public class HighestMountainPage extends BasePage<HighestMountainPage> {
 
     @Visible
     @CacheLookup
-    @FindBy(css = "table.wikitable") // luckily there's only one
+    // @FindBy(css = "table.wikitable") // luckily there's only one
+    @FindBy(xpath = "//table[@class='wikitable sortable jquery-tablesorter']") // luckily there's only one
     private StreamTable listTable;
 
     public static HighestMountainPage open() {

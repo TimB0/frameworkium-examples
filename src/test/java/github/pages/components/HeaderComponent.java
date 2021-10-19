@@ -16,17 +16,24 @@ public class HeaderComponent extends HtmlElement {
 
     @Visible
     @Name("Home Logo/Link")
-    @FindBy(css = "a.header-logo-invertocat")
+    // @FindBy(xpath = "//*[name()='svg']//*[local-name()='path']")
+    // @FindBy(xpath = "//*[name()='svg' and @class='octicon octicon-mark-github color-text-white']
+    @FindBy(xpath = "//a[@href='https://github.com/' and @class='mr-4']")
     private Link homeLink;
 
     @Name("Search Box")
-    @FindBy(name = "q")
+    @FindBy(xpath = "//input[@name='q'] ")
     private TextInput searchBox;
 
     @Visible
     @Name("Explore Link")
-    @FindBy(partialLinkText = "Explore")
+    // @FindBy(partialLinkText = "Explore")
+    @FindBy(xpath = "//summary[contains(text(),'Explore')]")
     private Link exploreLink;
+
+    @Name("Explore Github link")
+    @FindBy(xpath = "//a[contains(text(),'Explore GitHub ')]")
+    public Link exploreGithubLink;
 
     @Visible
     @Name("Marketing Sign-Up Banner")

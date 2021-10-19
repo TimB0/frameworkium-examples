@@ -16,9 +16,10 @@ public class HomePage extends BasePage<HomePage> {
     private WebElement planJourneyLink;
 
     @Step("Navigate to the TFL homepage")
-    public static HomePage open() {
+    public static AcceptCookiesPage open() {
         // alternative to PageFactory that creates a page object instance with URL
-        return new HomePage().get("https://tfl.gov.uk");
+        new HomePage().get("https://tfl.gov.uk");
+        return PageFactory.newInstance(AcceptCookiesPage.class);
     }
 
     @Step("Go to the plan journey page")
@@ -26,5 +27,4 @@ public class HomePage extends BasePage<HomePage> {
         planJourneyLink.click();
         return PageFactory.newInstance(PlanJourneyPage.class);
     }
-
 }

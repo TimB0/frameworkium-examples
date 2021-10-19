@@ -15,7 +15,8 @@ public class JourneyPlannerResultsPage extends BasePage<JourneyPlannerResultsPag
 
     @Visible
     @Name("Page Title Area")
-    @FindBy(css = "h1 span.hero-headline")
+    //@FindBy(css = "h1 span.jp-results-headline")
+    @FindBy(xpath = "//h1//span[@class='jp-results-headline']")
     private WebElement pageTitleArea;
 
     public String getTitleText() {

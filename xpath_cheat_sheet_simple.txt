@@ -1,4 +1,12 @@
 @FindBy(xpath = "//p[contains(text(),'Latest stable version')]//a")
+@FindBy(xpath = "//summary[contains(text(),'Explore')]")
 @FindBy(xpath = "//div[@class='dropdown']//button[@type='button' and @class='btn btn-secondary dropdown-toggle' and @id='dropdownMenuButton']")
 @FindBy(xpath = "//a[text()='test2 test2']//parent::td//preceding-sibling::td//div//input")
 @FindBy(xpath = "//a[text()='test2 test2']//preceding::td//preceding::td//div//input")
+
+For SVGs but can be applied to anything
+SVG example - @FindBy(xpath = "//*[name()='svg']//*[local-name()='path']")
+SVG example - @FindBy(xpath = "//*[name()='svg' and @class='octicon octicon-mark-github color-text-white']
+DIV example - @FindBy(xpath = "//*[name()='div']//*[local-name()='a']")
+
+@FindBy(xpath = "//input[@name='q']"
